@@ -2,9 +2,8 @@ package qotd
 
 class QuoteController {
     QuoteService quoteService
-    static scaffold = Quote
-
-    def index() { }
+    static scaffold = Quote.class
+    static defaultAction = "random"
 
     def random(){
         Quote randomQuote = quoteService.getRandomQuote()
